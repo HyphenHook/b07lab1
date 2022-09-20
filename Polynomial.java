@@ -7,7 +7,22 @@ public class Polynomial
 	}
 	public Polynomial(double[] coeffs)
 	{
-		coeff = coeffs;
+		//If array coeffs is not referenced elsewhere --> coeff = coeffs;
+		coeff = new double[coeffs.length];
+		for(int i = 0; i < coeffs.length; i++)
+		{
+			coeff[i] = coeffs[i];	
+		}
+	}
+	public void display()
+	{
+		for(int i = 0; i < coeff.length; i++)
+		{
+			if(i == 0) System.out.print("\n" + coeff[i]);
+			else if(coeff[i] != 0) System.out.print(coeff[i] + "x^" + i);
+			if(i != coeff.length - 1 && coeff[i] != 0) System.out.print("+");
+		}
+		System.out.println();
 	}
 	public Polynomial add(Polynomial other)
 	{
