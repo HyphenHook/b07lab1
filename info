@@ -1,0 +1,5 @@
+CSCB07 Lab 1
+Creating a Java Polynomial Class that consists of
+  - adding two polynomials {add()}
+  - evaluate the polynomial with value of x {evaluate()}
+  - determine if a given x is the root {hasRoot()}
